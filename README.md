@@ -95,3 +95,6 @@ The Digital Treasure Hunt platform has extensive potential for growth and evolut
 
 ### Contract Address
 `0x01D7678257D96280F6c882484ee8037bb79E6af7`
+
+![image](https://github.com/user-attachments/assets/f1a9120f-99b7-4a7c-9a01-3c00734f34dc)
+
