@@ -92,3 +92,6 @@ The Digital Treasure Hunt platform has extensive potential for growth and evolut
 - **Clue Discovery**: Engaging methods for revealing new challenges as players progress.
 - **Community Features**: Social elements that encourage discussion and collaboration while maintaining competitive aspects.
 - **Mobile Compatibility**: Responsive design ensuring accessibility across devices.
+
+### Contract Address
+`0x01D7678257D96280F6c882484ee8037bb79E6af7`
