@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Treasure Hunt</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Digital Treasure Hunt</h1>
+            <div id="wallet-info">
+                <button id="connect-wallet">Connect Wallet</button>
+                <div id="account-display" class="hidden">
+                    <span id="account-address"></span>
+                    <span id="account-balance"></span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="treasure-map">
+                <div class="map-container">
+                    <div class="map-background"></div>
+                    <div id="clue-markers"></div>
+                </div>
+            </div>
+
+            <div class="game-panel">
+                <div class="panel-section" id="hunt-status">
+                    <h2>Hunt Status</h2>
+                    <div class="status-display">
+                        <div class="status-indicator">
+                            <span id="status-icon">⏳</span>
+                            <span id="status-text">Loading...</span>
+                        </div>
+                        <div id="admin-controls" class="admin-section hidden">
+                            <button id="start-hunt" disabled>Start Hunt</button>
+                            <button id="reset-hunt" disabled>Reset Hunt</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section" id="current-clue">
+                    <h2>Current Clue</h2>
+                    <div id="clue-content">
+                        <p class="placeholder-text">Connect your wallet to see the current clue</p>
+                    </div>
+                    <div id="answer-form" class="hidden">
+                        <input type="text" id="answer-input" placeholder="Enter your answer...">
+                        <button id="submit-answer">Submit</button>
+                    </div>
+                </div>
+
+                <div class="panel-section" id="achievements">
+                    <h2>Your Achievements</h2>
+                    <div id="nft-gallery">
+                        <p class="placeholder-text">Connect your wallet to see your achievements</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="admin-panel" class="admin-section hidden">
+                <h2>Admin Controls</h2>
+                <div class="clue-management">
+                    <h3>Add New Clue</h3>
+                    <div class="form-group">
+                        <label for="clue-uri">Clue URI (IPFS):</label>
+                        <input type="text" id="clue-uri" placeholder="ipfs://...">
+                    </div>
+                    <div class="form-group">
+                        <label for="clue-answer">Answer:</label>
+                        <input type="text" id="clue-answer" placeholder="Secret answer...">
+                    </div>
+                    <button id="add-clue">Add Clue</button>
+                </div>
+                <div class="contract-management">
+                    <button id="withdraw-funds">Withdraw Funds</button>
+                </div>
+            </div>
+        </main>
+
+        <div id="notification" class="notification hidden">
+            <span id="notification-text"></span>
+            <button id="notification-close">×</button>
+        </div>
+
+        <div id="completion-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Congratulations!</h2>
+                <p>You've completed the Digital Treasure Hunt!</p>
+                <div class="completion-nft">
+                    <div class="nft-display">
+                        <div class="nft-placeholder">🏆</div>
+                        <p>Special Completion NFT</p>
+                    </div>
+                </div>
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Digital Treasure Hunt - A Web3 Adventure</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
